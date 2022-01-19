@@ -1,0 +1,36 @@
+{
+  "name": "modern-node-project-2022",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@6.27.1",
+  "description": "root",
+  "scripts": {
+    "preinstall": "cd deno && deno run -A dnt.ts",
+    "build": "turbo run build",
+    "build:ci": "turbo run build --cache-dir='.turbo'",
+    "test": "turbo run test",
+    "format": "deno fmt -c deno.jsonc",
+    "lint": "deno lint -c deno.jsonc"
+  },
+  "turbo": {
+    "npmClient": "pnpm",
+    "pipeline": {
+      "dev": {
+        "cache": false
+      },
+      "build": {
+        "outputs": [
+          "dist"
+        ]
+      },
+      "test": {}
+    }
+  },
+  "author": "mizchi",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.0.28",
+    "typescript": "^4.5.4",
+    "vitest": "^0.1.23"
+  }
+}

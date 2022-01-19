@@ -1,0 +1,6 @@
+.turbo
+node_modules
+.pnpm-debug.log
+dist
+packages/deno-pkg-node
+!packages/deno-pkg-node/package.json

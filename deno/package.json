@@ -1,0 +1,13 @@
+{
+  "name": "@internal/deno",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@6.27.1",
+  "description": "root",
+  "scripts": {
+    "build": "deno run -A dnt.ts",
+    "test": "deno test"
+  },
+  "author": "mizchi",
+  "license": "MIT"
+}

@@ -1,6 +1,6 @@
 # modern-node-project-2022
 
-My opinionated node stack
+My opinionated node & deno project
 
 ## Requirements
 
@@ -17,6 +17,13 @@ My opinionated node stack
 - format: `deno fmt`
 - incremental build: turbo
 - import deno module from nodejs by https://github.com/denoland/dnt
+
+
+## Directories
+
+- `apps/*`: node app
+- `packages/*`: node packages
+- `deno/*`: deno modules
 
 ## Develop
 

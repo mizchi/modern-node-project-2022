@@ -6,7 +6,7 @@
   "description": "root",
   "scripts": {
     "build": "deno run -A dnt.ts",
-    "test": "deno test"
+    "test": "deno test --ignore=packages"
   },
   "author": "mizchi",
   "license": "MIT"

@@ -3,7 +3,7 @@ import { build } from "https://deno.land/x/dnt/mod.ts";
 await build({
   cjs: false,
   entryPoints: ["./deno-pkg/mod.ts"],
-  outDir: "../packages/deno-pkg-node",
+  outDir: "./packages/deno-pkg-node",
   shims: {
     deno: true,
   },

@@ -18,26 +18,33 @@ importers:
       '@internal/helper': workspace:*
       vite: ^2.7.13
     devDependencies:
-      '@internal/deno-pkg-node': link:../../packages/deno-pkg-node
+      '@internal/deno-pkg-node': link:../../deno/packages/deno-pkg-node
       '@internal/helper': link:../../packages/helper
       vite: 2.7.13
 
   deno:
     specifiers: {}
 
-  packages/deno-pkg-node:
+  deno/packages/deno-pkg-node:
     specifiers:
+      '@deno/shim-deno': ~0.1.1
+      '@types/node': 16.11.1
       chalk: 4.1.2
     devDependencies:
+      '@deno/shim-deno': 0.1.2
+      '@types/node': 16.11.1
       chalk: 4.1.2
-
-  packages/deno-pkg-node/esm:
-    specifiers: {}
 
   packages/helper:
     specifiers: {}
 
 packages:
+
+  /@deno/shim-deno/0.1.2:
+    resolution: {integrity: sha512-qoNVXCK5ATX6k6Oq0qWVTQpSwT2XE+KPymNTV1CTQhL3KRqR4KGlCWM2M/xW8U+KwGv8KjWR4S2lOKcspRUg9A==}
+    dependencies:
+      which: 2.0.2
+    dev: true
 
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
@@ -47,6 +54,10 @@ packages:
 
   /@types/chai/4.3.0:
     resolution: {integrity: sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==}
+    dev: true
+
+  /@types/node/16.11.1:
+    resolution: {integrity: sha512-PYGcJHL9mwl1Ek3PLiYgyEKtwTMmkMw4vbiyz/ps3pfdRYLVv+SN7qHVAImrjdAXxgluDEw6Ph4lyv+m9UpRmA==}
     dev: true
 
   /ansi-styles/4.3.0:
@@ -294,6 +305,10 @@ packages:
     resolution: {integrity: sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==}
     dependencies:
       has: 1.0.3
+    dev: true
+
+  /isexe/2.0.0:
+    resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
   /local-pkg/0.4.1:
@@ -552,4 +567,12 @@ packages:
       - less
       - sass
       - stylus
+    dev: true
+
+  /which/2.0.2:
+    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
+    engines: {node: '>= 8'}
+    hasBin: true
+    dependencies:
+      isexe: 2.0.0
     dev: true

@@ -1,5 +1,5 @@
 packages:
-  - 'deno'
-  - 'apps/**'
-  - 'packages/**'
-  - '!**/test/**'
+  - deno
+  - deno/packages/*
+  - apps/*
+  - packages/*

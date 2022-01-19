@@ -1,5 +1,5 @@
 {
-  "name": "modern-node-project-2022",
+  "name": "modern-node-project-2022-root",
   "private": true,
   "version": "1.0.0",
   "packageManager": "pnpm@6.27.1",
@@ -20,7 +20,8 @@
       },
       "build": {
         "outputs": [
-          "dist"
+          "dist",
+          "./packages"
         ]
       },
       "test": {}

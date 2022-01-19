@@ -11,7 +11,7 @@
         "apps/web/src",
         "packages/helper/src"
       ],
-      "exclude": ["node_modules", "packages/deno-pkg-node"]
+      "exclude": ["node_modules", "packages/deno-pkg-node", "deno/packages"]
     },
     "rules": {
       "tags": ["recommended"],

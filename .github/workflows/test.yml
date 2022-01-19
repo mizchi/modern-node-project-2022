@@ -41,5 +41,6 @@ jobs:
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
+      - run: pnpm run build:ci
       - run: pnpm run lint
       - run: pnpm run test
